@@ -28,7 +28,7 @@ class ListFiles
 
 That's it! you can get help and run it:
 
-```console
+```shell
 > example.exe help
 Usage:
     Example -path <string> [ -pattern <string>|* ] [ -recursive ]
