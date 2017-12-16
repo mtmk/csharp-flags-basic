@@ -2,7 +2,7 @@
 
 This is a very simple command line flags library to make console application development easy and effortless.
 
-Just add the Flags.cs file into your project and call it in Main. You're done. You can add your commands as simple classes with a static Run() method and they would be automatically picked up.
+Just add the FlagsBasic/Flags.cs file into your project and call it in Main. You're done. You can add your commands as simple classes with a static Run() method and they would be automatically picked up.
 
     class Program
     {
