@@ -119,8 +119,8 @@ namespace FlagsBasic
                     try 
                     {
                         return (int) t.InvokeMember(FlagsConfig.RunMethodName,
-                            BindingFlags.Public | BindingFlags.NonPublic | 
-                            BindingFlags.Static | BindingFlags.InvokeMethod, null, null, vs.ToArray());
+                                                    BindingFlags.Public | BindingFlags.Static | BindingFlags.InvokeMethod,
+                                                    null, null, vs.ToArray());
                     } 
                     catch (TargetInvocationException e) 
                     {

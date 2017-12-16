@@ -14,9 +14,9 @@ Just add the Flags.cs file into your project and call it in Main. You're done. Y
 
     class ListFiles
     {
-        public static int Run(string path)
+        public static int Run(string path, string pattern = "*", bool recursive = false)
         {
-            foreach(var file in Directory.GetFiles(path))
+            foreach(var file in Directory.GetFiles(path, pattern, recursive ? SearchOption.AllDirectories : SearchOption.TopDirectoryOnly))
             {
                 Console.WriteLine(file);
             }
@@ -24,12 +24,13 @@ Just add the Flags.cs file into your project and call it in Main. You're done. Y
         }
     }
 
-That's it! you can get help and run:
+That's it! you can get help and run it:
 
-    $ program help
-    program -path <string>
+    > example.exe help
+    Usage:
+      Example -path <string> [ -pattern <string>|* ] [ -recursive ]
 
-    $ program -path /tmp
+    > example.exe -path /tmp
     /tmp/file1
     /tmp/file1
     ...
