@@ -3,16 +3,14 @@
   <metadata>
     <id>$id$</id>
     <version>$version$</version>
-    <title>$title$</title>
-    <authors>$author$</authors>
-    <owners>$author$</owners>
-    <licenseUrl>http://LICENSE_URL_HERE_OR_DELETE_THIS_LINE</licenseUrl>
-    <projectUrl>http://PROJECT_URL_HERE_OR_DELETE_THIS_LINE</projectUrl>
-    <iconUrl>http://ICON_URL_HERE_OR_DELETE_THIS_LINE</iconUrl>
+    <title>Flags Basic</title>
+    <authors>Ziya Suzen</authors>
+    <owners>Ziya Suzen</owners>
+    <licenseUrl>https://github.com/mtmk/csharp-flags-basic/blob/master/LICENSE</licenseUrl>
+    <projectUrl>https://github.com/mtmk/csharp-flags-basic</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
-    <description>$description$</description>
-    <releaseNotes>Summary of changes made in this release of the package.</releaseNotes>
+    <description>A basic, quick and easy to use command line flags and options library.</description>
     <copyright>Copyright 2017</copyright>
-    <tags>Tag1 Tag2</tags>
+    <tags>flags flag commandline options</tags>
   </metadata>
 </package>
