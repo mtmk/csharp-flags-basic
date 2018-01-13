@@ -1,11 +1,15 @@
 ﻿using System;
 using System.Reflection;
 using System.Text.RegularExpressions;
-using System.Linq;
 using System.Collections.Generic;
 
 namespace FlagsBasic
 {
+#if NET20
+    public delegate T Func<T>();
+#endif
+
+
     public static class FlagsConfig
     {
         public static string RunMethodName = "Run";
@@ -34,7 +38,7 @@ namespace FlagsBasic
         static int Run(string[] args, Type[] ts)
         {
             var name = OnlyOne(ts) ?? args[0];
-            var used = new HashSet<int>();
+            var used = new Dictionary<int, int>();
 
             foreach (var t in ts)
             {
@@ -45,7 +49,7 @@ namespace FlagsBasic
                 {
                     var vs = new List<object>();
 
-                    if (args.Length > 0 && args[0] == name) used.Add(0);
+                    if (args.Length > 0 && args[0] == name) used.Add(0, 0);
 
                     foreach(var p in m.GetParameters())
                     {
@@ -63,11 +67,11 @@ namespace FlagsBasic
 
                         for (int i = 0; i < args.Length; i++)
                         {
-                            if (used.Contains(i)) continue;
+                            if (used.ContainsKey(i)) continue;
 
                             if (p.ParameterType == typeof(bool) && args[i] == "-"+pn)
                             {
-                                used.Add(i);
+                                used.Add(i, i);
                                 v = true;
                                 break;
                             }
@@ -75,8 +79,8 @@ namespace FlagsBasic
                             {
                                 if (args[i] == "-"+pn && args.Length > i+1)
                                 {
-                                    used.Add(i);
-                                    used.Add(i + 1);
+                                    used.Add(i, i);
+                                    used.Add(i + 1, i + 1);
                                     try
                                     {
                                         v = Convert.ChangeType(args[i+1], p.ParameterType);
@@ -106,12 +110,12 @@ namespace FlagsBasic
                     var unknown = new List<string>();
                     for (int i = 0; i < args.Length; i++)
                     {
-                        if (used.Contains(i)) continue;
+                        if (used.ContainsKey(i)) continue;
                         unknown.Add(args[i]);
                     }
                     if (unknown.Count > 0)
                     {
-                        Console.Error.WriteLine("Unknown argument: {0}", string.Join(" ", unknown));
+                        Console.Error.WriteLine("Unknown argument: {0}", string.Join(" ", unknown.ToArray()));
                         Help(ts, name);
                         return 2;
                     }
