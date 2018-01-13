@@ -13,6 +13,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagsBasic35", "FlagsBasic3
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagsBasic20", "FlagsBasic20\FlagsBasic20.csproj", "{FB7D76DC-50C4-4A7D-9535-A2652A94BBBB}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FlagsBasic45Test", "FlagsBasic45Test\FlagsBasic45Test.csproj", "{3F4A8A67-655E-4CBC-BD0C-70E594920AAD}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -39,6 +41,10 @@ Global
 		{FB7D76DC-50C4-4A7D-9535-A2652A94BBBB}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FB7D76DC-50C4-4A7D-9535-A2652A94BBBB}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FB7D76DC-50C4-4A7D-9535-A2652A94BBBB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3F4A8A67-655E-4CBC-BD0C-70E594920AAD}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3F4A8A67-655E-4CBC-BD0C-70E594920AAD}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3F4A8A67-655E-4CBC-BD0C-70E594920AAD}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3F4A8A67-655E-4CBC-BD0C-70E594920AAD}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
