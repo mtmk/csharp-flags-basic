@@ -5,6 +5,11 @@ This is a very simple command line flags library to make console application dev
 Just add the [FlagsBasic NuGet package](https://www.nuget.org/packages/FlagsBasic/) to your project and you're done.
 It supports Net Standard 2.0 as well as older .Net Framework versions as old as .Net Framework 2.0.
 
+```shell
+> dotnet new console
+> dotnet add package flagsbasic
+```
+
 ## Usage
 
 The idea is simple. .Net has amazing reflection capabilities and there is already a ton of meta data about the code
