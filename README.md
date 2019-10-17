@@ -9,7 +9,7 @@ It supports Net Standard 2.0 as well as older .Net Framework versions as old as 
 
 The idea is simple. .Net has amazing reflection capabilities and there is already a ton of meta data about the code
 in .Net assembilies. Using this information only we inspect the current assembly and run the selected method.
-Method selection is done by mathing the first command line argument to a class name, then using the static Run()
+Method selection is done by matching the first command line argument to a class name, then using the static Run()
 method of that class, passing the rest of the command line arguments as the parameters to the Run() method.
 
 ```csharp
