@@ -72,7 +72,7 @@ Usage:
 ### Supported types
 
 String is the most common type as well as other numeric types. We match the name of the parameter to the argument
-begining with a dash (-) then parse the next argument using .Net Convert functionality. Only boolean typed parameters
+begining with a dash (-) then parse the next argument using [System.Convert.ChangeType()](https://docs.microsoft.com/dotnet/api/system.convert.changetype) functionality. Only boolean typed parameters
 are treated a little differently by using them as flags with no value followed by it. Because it's only set to
 true if existed and currently there is no way to negate them, it only makes sense for bool parameters to be default to false.
 
