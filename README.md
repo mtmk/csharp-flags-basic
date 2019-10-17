@@ -13,13 +13,13 @@ It supports Net Standard 2.0 as well as older .Net Framework versions as old as 
 ## Usage
 
 The idea is simple. .Net has amazing reflection capabilities and there is already a ton of meta data about the code
-in .Net assembilies. Using this information only we inspect the current assembly and run the selected method.
+in .Net assembilies. Using this information only, we inspect the current assembly and run the selected method.
 Method selection is done by matching the first command line argument to a class name, then using the static Run()
 method of that class, passing the rest of the command line arguments as the parameters to the Run() method.
 
 This approach makes the implementations free from clutter since it works by convention. The only thing you need to add is
 the call to ParseAndRun(). That's it. This approach makes it very easy to create commandline applications compared
-to other approaches, which requires fair amount of attribute decoration and so on. On the other hand it FlagsBasic
+to other approaches, which requires fair amount of attribute decoration and so on. On the other hand, FlagsBasic
 approach might not scale well if you are building a big command line application with a lot of functionality.
 
 ```csharp
